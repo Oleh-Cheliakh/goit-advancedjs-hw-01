@@ -32,10 +32,8 @@ formElement.addEventListener('submit', event => {
 
 function fillFormFields() {
   let savedValues = JSON.parse(localStorage.getItem('feedback-form-state'));
-  if (savedValues.email) {
+  if (savedValues) {
     emailInput.value = savedValues.email;
-  }
-  if (savedValues.message) {
     messageInput.value = savedValues.message;
   }
 }
